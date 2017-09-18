@@ -25,16 +25,13 @@ class GetAddressModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = GetAddressInteractor()
+        let interactor = AppDelegate.container.resolve(GetAddressInteractor.self)!
         interactor.output = presenter
 
         presenter.interactor = interactor
         viewController.output = presenter
         
         router.viewController = viewController
-
-        interactor.API = IPService2.instance
-        
     }
 
 }

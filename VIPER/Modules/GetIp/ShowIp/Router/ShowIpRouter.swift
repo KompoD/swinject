@@ -13,8 +13,8 @@ class ShowIpRouter: ShowIpRouterInput {
     
     func presentSayMyName() {
         
-        let jopa = jopaBuilder.build()
+        //let jopa = jopaBuilder.build()
         
-        viewController.present(jopa, animated: true, completion: nil)
+        //viewController.present(jopa, animated: true, completion: nil)
     }
 }

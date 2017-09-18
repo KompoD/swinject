@@ -11,12 +11,15 @@ import Swinject
 
 class GetAddressInteractor: GetAddressInteractorInput {
 
+    let network: IPProtocol
     weak var output: GetAddressInteractorOutput!
     
-    //var API: IPPrortosaddress() {
-        let myIp: IPProtocol//API.getWiFiAddress()
-        myIp.getWiFiAddress()
-        
-        output.wiFiFetched(myIp ?? "")
+    init(network: IPProtocol) {
+        self.network = network
+    }
+    
+    func getWiFiAddress() {
+        let ip = network.getWiFiAddress()
+        output.wiFiFetched(ip ?? "")
     }
 }

@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    static let container: Container = {
+        let container = Container()
+        container.register(IPProtocol.self) { _ in IPService.instance }
+        container.register(GetAddressInteractor.self) { r in
+            let interactor = GetAddressInteractor(network: r.resolve(IPProtocol.self)!)
+            return interactor
+        }
 
+        return container
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
