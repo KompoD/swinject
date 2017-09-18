@@ -9,16 +9,14 @@
 import SwinjectStoryboard
 import Swinject
 
-extension SwinjectStoryboard {
+/*extension SwinjectStoryboard {
     class func setup() {
-        
-        defaultContainer.storyboardInitCompleted(GetAddressViewController.self) { r, c in
-            c.address = r.resolve(GetAddressInteractor.self)
-        }
     
         defaultContainer.register(IPProtocol.self) { _ in IPService.instance }
         defaultContainer.register(GetAddressInteractor.self) { r in
-            GetAddressInteractor(coder: r.resolve(IPProtocol.self)!)
+            let interactor = GetAddressInteractor(network: r.resolve(IPProtocol.self)!)
+            return interactor
         }
     }
 }
+*/

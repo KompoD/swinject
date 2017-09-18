@@ -767,7 +767,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OFKBANK.VIPER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nikitamerkel/Desktop/XCodeProject/VIPER/VIPER/Supporting Files/Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting Files/Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -782,7 +782,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = OFKBANK.VIPER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/nikitamerkel/Desktop/XCodeProject/VIPER/VIPER/Supporting Files/Bridge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting Files/Bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
